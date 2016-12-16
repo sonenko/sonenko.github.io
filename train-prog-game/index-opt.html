@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+<div id="socials">
+    <a href="https://github.com/sonenko/train-prog-game" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+    <!--<a href="http://www.facebook.com/share.php?u=[URL]&title=[TITLE]"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>-->
+    <!--<a href="http://www.linkedin.com/shareArticle?mini=true&url=[URL]&title=[TITLE]&source=[SOURCE/DOMAIN]" target="_blank"><i class="fa fa-linkedin-square " aria-hidden="true"></i></a>-->
+</div>
+
+<h4>
+    Write pseudo code that will be used by 2 trains and will entail situation when
+    rear train will catch up with the first
+</h4>
+
+<canvas id="canvas" height="120" width="1400"></canvas>
+
+<div class="container">
+    <div class="nav box">
+        <h4>Available commands</h4>
+        <div id="commands">
+            <div class="command wait" draggable="true" data-index="0">
+                Wait
+                <i class="fa fa-question-circle-o" aria-hidden="true">
+                    <span class="tooltip">Train will wait</span>
+                </i>
+            </div>
+            <div class="command goforward" draggable="true" data-index="1">
+                GoForward
+                <i class="fa fa-question-circle-o" aria-hidden="true">
+                    <span class="tooltip">Train will move forward</span>
+                </i>
+            </div>
+            <div class="command goto" draggable="true" data-index="2">
+                GoTo
+                <i class="fa fa-question-circle-o" aria-hidden="true">
+                    <span class="tooltip">Forwards program to specified line in editor</span>
+                </i>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                </select>
+            </div>
+            <div class="command ifstation" draggable="true" data-index="3">
+                IfStation
+                <i class="fa fa-question-circle-o" aria-hidden="true">
+                    <span class="tooltip">Executes next command on the same line if Train at station</span>
+                </i>
+            </div>
+        </div>
+
+        <h4>Run program</h4>
+        <div id="run-button" class="waiting">
+            <div class="run-icon"></div>
+        </div>
+    </div>
+
+    <div id="editor" class="box">
+        <h4>Program zone (drop commands from left here)</h4>
+        <ul class="code-lines"></ul>
+    </div>
+</div>
+
+<script type="text/javascript" src="./train-programming-game-opt.js"></script>
+<script>
+  window.globals = train.Main().globals;
+</script>
+</body>
+</html>
