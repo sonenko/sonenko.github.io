@@ -10,8 +10,23 @@ body {
     background-color: #212121;
 }
 
-h4 {
-    font-size: 130%;
+h1, h1 *{
+    font-size: 30px;
+}
+
+h2, h2 * {
+    font-size: 26px;
+}
+
+h3, h3 * {
+    font-size: 22px;
+}
+
+h4, h4 * {
+    font-size: 18px;
+}
+
+.text-center {
     text-align: center;
 }
 
@@ -50,6 +65,10 @@ h4 {
 
 #commands > .command {
     margin-top: 5px;
+}
+
+#commands > .command .fa-remove {
+    display: none;
 }
 
 #run-button {
@@ -191,6 +210,27 @@ select {
     width: 30px;
     text-align: right;
     border-right: 1px solid #00CC7D;
+    position: relative;
+}
+
+.active-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -28px;
+    border-radius: 7px;
+}
+
+.active-dot-rear {
+    background-color: #425275;
+    box-shadow: 0 0 3px #425275;
+    left: -14px;
+}
+
+.active-dot-lead {
+    background-color: #625252;
+    box-shadow: 0 0 3px #625252;
+    left: 3px;
 }
 
 .command-placeholder {
@@ -232,4 +272,47 @@ select {
 #socials *{
     font-size: 39px;
     margin-left: 3px;
+}
+
+/** POPUP **/
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contents{
+    z-index: 2;
+    color: #293134;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 2px #00CC7D;
+    padding: 40px;
+    margin: 15% auto;
+    width: 50%;
+    text-align: center;
+}
+.modal-contents * {
+    color: #293134;
+}
+.modal .clickable {
+    color: #00CC7D;
+    border-radius: 2px;
+    padding: 0px 5px;
+}
+
+.modal .clickable:hover {
+    background-color:#e5e5e5;
+}
+
+.modal .clickable, .modal .clickable * {
+    cursor: pointer;
+    color: #00CC7D;
+    display: inline-block;
 }

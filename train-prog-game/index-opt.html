@@ -11,35 +11,37 @@
 
 <div id="socials">
     <a href="https://github.com/sonenko/train-prog-game" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-    <!--<a href="http://www.facebook.com/share.php?u=[URL]&title=[TITLE]"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>-->
-    <!--<a href="http://www.linkedin.com/shareArticle?mini=true&url=[URL]&title=[TITLE]&source=[SOURCE/DOMAIN]" target="_blank"><i class="fa fa-linkedin-square " aria-hidden="true"></i></a>-->
+    <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fsonenko.github.io%2Ftrain-prog-game%2Findex-opt.html&title=Train%20programming%20game"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fsonenko.github.io%2Ftrain-prog-game%2Findex-opt.html&title=Train%20programming%20game" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
 </div>
 
-<h4>
-    Write pseudo code that will be used by 2 trains and will entail situation when
-    rear train will catch up with the first
+<h4 class="text-center">
+    Make the rear train to catch up the front one using available commands below
 </h4>
 
 <canvas id="canvas" height="120" width="1400"></canvas>
 
 <div class="container">
     <div class="nav box">
-        <h4>Available commands</h4>
+        <h4 class="text-center">Available commands</h4>
         <div id="commands">
             <div class="command wait" draggable="true" data-index="0">
                 Wait
+                <i class="fa fa-remove" aria-hidden="true"></i>
                 <i class="fa fa-question-circle-o" aria-hidden="true">
                     <span class="tooltip">Train will wait</span>
                 </i>
             </div>
             <div class="command goforward" draggable="true" data-index="1">
                 GoForward
+                <i class="fa fa-remove" aria-hidden="true"></i>
                 <i class="fa fa-question-circle-o" aria-hidden="true">
                     <span class="tooltip">Train will move forward</span>
                 </i>
             </div>
             <div class="command goto" draggable="true" data-index="2">
                 GoTo
+                <i class="fa fa-remove" aria-hidden="true"></i>
                 <i class="fa fa-question-circle-o" aria-hidden="true">
                     <span class="tooltip">Forwards program to specified line in editor</span>
                 </i>
@@ -68,24 +70,24 @@
             </div>
             <div class="command ifstation" draggable="true" data-index="3">
                 IfStation
+                <i class="fa fa-remove" aria-hidden="true"></i>
                 <i class="fa fa-question-circle-o" aria-hidden="true">
                     <span class="tooltip">Executes next command on the same line if Train at station</span>
                 </i>
             </div>
         </div>
 
-        <h4>Run program</h4>
+        <h4 class="text-center">Run program</h4>
         <div id="run-button" class="waiting">
             <div class="run-icon"></div>
         </div>
     </div>
 
     <div id="editor" class="box">
-        <h4>Program zone (drop commands from left here)</h4>
+        <h4 class="text-center">Program zone (drop commands from left here)</h4>
         <ul class="code-lines"></ul>
     </div>
 </div>
-
 <script type="text/javascript" src="./train-programming-game-opt.js"></script>
 <script>
   window.globals = train.Main().globals;
