@@ -7,7 +7,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #212121;
+    background-color: #242424;
+}
+
+#pph-hireme {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
 
 h1, h1 *{
@@ -74,7 +80,7 @@ h4, h4 * {
 #run-button {
     width: 140px;
     height: 140px;
-    background-color: #212121;
+    background-color: #242424;
     border-radius: 70px;
     margin: auto;
     margin-bottom: 15px;
